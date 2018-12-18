@@ -1,0 +1,235 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #1c1c1c
+	opacity: 1
+
+*:-moz-placeholder
+	color: #1c1c1c
+	opacity: 1
+
+*::-moz-placeholder
+	color: #1c1c1c
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #1c1c1c
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+
+body
+	font-size: 14px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+
+
+
+.site__header
+	text-align: center
+	font-size: 14px
+	margin-top: -10px
+	ul
+		list-style-type: none
+		padding: 0
+		margin: 0
+		li
+			display: inline-block
+			position: relative
+			margin-right: -4px
+			&.active, &:hover
+				a
+					color: $accent
+					&::before
+						color: $accent
+			&.active
+				a
+					background-color: #323232
+			a
+				color: #979797
+				text-decoration: underline
+				display: block
+				padding: 24px 20px 25px 35px
+				margin-top: -20px
+				margin-bottom: -20px
+				transition: color .25s ease, background-color .5s ease
+				min-height: 75px
+			 
+					
+
+.main__page	
+	a
+		font-size: 12px	 	 
+
+html.mm-opened
+	overflow-y: scroll !important
+	body
+		background-color: #f2f2f2
+.mm-panels > .mm-panel.mm-hasnavbar
+	right: -18px
+ 
+.mm-listview>li:not(.mm-divider):after
+	display: none
+.mm-panels>.mm-panel>.mm-listview:first-child, .mm-panels>.mm-panel>.mm-navbar+.mm-listview
+	margin-top: 0
+.mm-menu.mm-theme-white .mm-listview > li.mm-selected > a:not(.mm-next), .mm-menu.mm-theme-white .mm-listview > li.mm-selected > span
+	background-color: transparent
+	color: $accent
+.mm-panels>.mm-panel:after, .mm-panels>.mm-panel:before
+	height: 0
+.mm-listview>li>a
+	padding:
+	left: 14%
+	right: 14%
+	top: 8px
+	bottom: 8px
+	transition: color .25s ease
+	&:hover
+		color: $accent
+		&::before
+			color: $accent
+	 
+	img
+		margin-right: 20px
+.mm-listview>li.active
+	&>a
+		color: $accent
+		&::before
+			color: $accent
+.mm-listview
+	color: #1a1a1a	
+.mm-listview>li>a, .mm-listview>li>span 
+    color: inherit
+    display: block
+    
+
+.hamburger
+	left: 10px
+	top: 20px
+	position: relative 
+ 
+
+// 	.hamburger-inner
+// 		width: 22px
+// 	.hamburger-inner::after
+// 		width: 15px
+// 		left: 0
+
+	 
+
+.mm-navbar
+	height: auto
+	border: none
+	position: relative
+	.mm-title
+		padding: 0
+		img
+			width: 128px
+			height: auto
+			margin: 5px 0 35px
+.main__logo
+	text-align: center
+	margin-top: 160px
+	margin-bottom: 50px
+
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.search
+	form
+		display: block
+		text-align: center
+		margin-top: 50px
+		position: relative
+
+		input
+			width: 301px
+			border-radius: 15px
+			background-color: #f3f3f3
+			border: none
+			height: 37px
+			padding-left: 20px 
+			outline: none
+			margin: 0
+
+			 
+ 
+		
+.button
+	display: inline-block
+	border: 1px solid $accent
+	color: #1a1a1a
+	text-decoration: none
+	padding: 12px 10px
+	font-size: 12px
+	font-weight: 600
+	border-radius: 30px
+	text-align: center
+	position: relative
+	outline: none
+	transition: background-color .1s ease
+	width: 150px
+		 
+	&:focus, &:hover
+		text-decoration: none
+		color: #1a1a1a
+	&:hover
+		background-color: lighten($accent, 5%)
+		&::after
+			opacity: .22
+	&:active
+		background-color: darken($accent, 5%)
+		&::after
+			opacity: .32
+ 
+.main__button
+	display: flex
+	text-align: center
+
+.footer__info
+	position: relative
+	bottom: 1em
+	text-align: center
+	margin-top: 140px
+	font-size: 12px
+.fa-microphone
+		position: absolute
+		display: flex
+		right: 0
+		font-size: 18px 
+		margin-right: 38%
+		margin-top: -27px
+		color: #1c1c1c
+
+::selection
+	background-color: $accent
+	color: #fff
+
+@import "media" // Всегда в конце
